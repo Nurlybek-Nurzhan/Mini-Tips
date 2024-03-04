@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"),
+    url("../fonts/Montserrat-Regular.woff") format("woff"),
+    url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.ttf") format("ttf"),
+    url("../fonts/Montserrat-Regular.eot") format("eot");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-Bold.woff") format("woff"),
+    url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.ttf") format("ttf"),
+    url("../fonts/Montserrat-Bold.eot") format("eot");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: local("Montserrat"), url("../fonts/Montserrat-Black.woff") format("woff"),
+    url("../fonts/Montserrat-Black.woff2") format("woff2"),
+    url("../fonts/Montserrat-Black.ttf") format("ttf"),
+    url("../fonts/Montserrat-Black.eot") format("eot");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Kusanagi;
+  src: local("Kusanagi"), url("../fonts/Kusanagi.woff") format("woff"),
+    url("../fonts/Kusanagi.woff2") format("woff2"),
+    url("../fonts/Kusanagi.ttf") format("ttf"),
+    url("../fonts/Kusanagi.eot") format("eot");
+
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

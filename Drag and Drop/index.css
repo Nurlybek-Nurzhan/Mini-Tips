@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+@property --startColor1 {
+  syntax: "<color>";
+  initial-value: #1a5d1a;
+  inherits: false;
+}
+
+@property --startColor2 {
+  syntax: "<color>";
+  initial-value: #9dc08b;
+  inherits: false;
+}
+
+@property --dragColor1 {
+  syntax: "<color>";
+  initial-value: #27005d;
+  inherits: false;
+}
+
+@property --dragColor2 {
+  syntax: "<color>";
+  initial-value: #687eff;
+  inherits: false;
+}
+
+@property --endColor1 {
+  syntax: "<color>";
+  initial-value: #c21292;
+  inherits: false;
+}
+
+@property --endColor2 {
+  syntax: "<color>";
+  initial-value: #ef4040;
+  inherits: false;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  width: 600px;
+  height: 143px;
+}
+
+.area {
+  width: 33.3333333333%;
+  height: 143px;
+  position: absolute;
+  z-index: 1;
+}
+
+.area-1 {
+  left: 0%;
+}
+
+.area-2 {
+  left: 33.3333333333%;
+}
+
+.area-3 {
+  left: 66.6666666667%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e5e5e5;
+  display: flex;
+  padding-top: 5rem;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.col-header {
+  width: 150px;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+  text-align: center;
+  z-index: 0;
+}
+
+.item {
+  width: 150px;
+  height: 66px;
+  border: 1px solid #eee;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  background: #f7f6f7;
+  padding: 0.8rem 1rem;
+  color: #828282;
+  text-align: center;
+  cursor: grab;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  width: 150px;
+  height: 66px;
+  z-index: 1;
+}
+
+.start {
+  background: linear-gradient(
+    50deg,
+    var(--startColor1) 0%,
+    var(--startColor2) 100%
+  );
+  transition: --startColor1 0.5s, --startColor2 0.5s ease-in-out;
+}
+
+.progress {
+  background: linear-gradient(
+    40deg,
+    var(--dragColor1) 0%,
+    var(--dragColor2) 100%
+  );
+  transition: --dragColor1 0.5s, --dragColor2 0.5s ease-in-out;
+}
+
+.done {
+  background: linear-gradient(
+    60deg,
+    var(--endColor1) 0%,
+    var(--endColor2) 100%
+  );
+  transition: --endColor1 0.5s, --endColor2 0.5s ease-in-out;
+}
+
+.startHover {
+  --startColor1: #0531f7;
+  --startColor2: #ff3f3a;
+}
+
+.progressHover {
+  --dragColor1: #0531f7;
+  --dragColor2: #ff3f3a;
+}
+
+.doneHover {
+  --endColor1: #0531f7;
+  --endColor2: #ff3f3a;
+}
+
+.hold {
+  border: 2px solid #ccc;
+  box-shadow: 0 0 4px #000000;
+}
+
+.hide {
+  display: none;
+}
+
+.hovered {
+  border: 2px solid #828282;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgb(95, 94, 94);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+}
